@@ -4,4 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ipykernel>=7.2.0",
+    "langchain>=1.2.13",
+    "langchain-core>=1.2.20",
+    "langchain-ollama>=1.0.1",
+    "load-dotenv>=0.1.0",
+    "pydantic>=2.12.5",
+]
