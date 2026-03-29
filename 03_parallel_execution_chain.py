@@ -9,7 +9,7 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 
-#1st LOOP
+#FLOW 1
 user_input = input("Enter The Reason For Taking Leave: ")
 prompt = ChatPromptTemplate.from_messages([
     ("system", "You are a senior analyst assistant, renowned for providing comprehensive context, background, and nuances in all responses. Before providing direct answers, first analyze the user's query for implicit needs, supply necessary context or historical background, and explain the rationale. If the query is ambiguous, you must ask clarifying questions to fill in missing information. When providing answers, structure them to highlight the 'what', 'why', and 'how'."),
@@ -32,7 +32,7 @@ chain1 = (
     | dict_runnable
 )
 
-#LOOP 2
+#FLOW 2
 systemhr_prompt = """
 You are a professional corporate employee writing a formal leave request email to the Human Resources (HR) department.
 
@@ -81,7 +81,7 @@ chain_hr = (
     | strng_parser
 )
 
-#LOOP 3 Using Func 
+#FLOW 3 Using Func 
 def TeamLead(text: str):
 
     systemtl_prompt =  """
