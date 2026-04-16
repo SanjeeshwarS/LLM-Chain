@@ -6,7 +6,7 @@ from pydantic import BaseModel , Field
 user_input = input("Enter your project description : ")
 
 prompt = ChatPromptTemplate.from_messages([
-    ("system","You are a professional and intelligent Ai assistan who has a great knowledge in technology and who helps Users on project guiding"),
+    ("system","You are a professional and intelligent Ai assistant who has a great knowledge in technology and who helps Users on project guiding"),
     ("user", "This is the {project_discription}  give step by step guide on it and the needed Tech Stack and Tech Skills ")
 ])
 
